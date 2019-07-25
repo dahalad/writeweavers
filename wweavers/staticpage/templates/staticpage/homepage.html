@@ -4,14 +4,14 @@
 
 {% block content %}
 
-<div class="home home-section">
+<div class="home home-section"  id="home">
     <sapn class="small-text">Helping Businesses, Non-Profits, Individuals</sapn><br>
     <sapn class="big-text"><b>Create And Deliver</b></sapn><br>
     <sapn class="big-text"><b>Quality Communication Material</b></sapn><br>
     <button type="button" class="learn-more-btn">Learn More</button>
 </div>
 
-<div class="about home-section">
+<div class="about home-section" id="about">
     <div class="big-text about-us-title"><p><b>About Us</b></p></div>
     <div><p>WriteWeavers is a company formed to address the needs of quality communication
     services in Nepal. We specialize in written communication and PR services.
@@ -36,8 +36,8 @@
     </div>
 </div>
 
-<div class="services home-section">
-    <div class="big-text"><p><b>Our Services</b></p></div>
+<div class="services home-section" id="services">
+    <div class="big-text" ><p><b>Our Services</b></p></div>
     <p>Our Service portfolio includes, but is not limited to, the following</p>
     <ul>
         <li>Planning, writing and editing articles for magazines and broadsheets</li>
@@ -51,8 +51,17 @@
     </ul>
 </div>
 
-<div class="contact home-section">
-    <h1>Contact</h1>
+<div class="contact home-section group">
+    <div class="contact-details lefter">
+        <ul>
+            <li><img src="/static/css/telephone.svg" alt="Phone Number" style="width: 20px"><span class="contact-item">+977-1-500000</span></li>
+            <li><img src="/static/css/telephone.svg" alt="E-mail Address" style="width: 20px"><span class="contact-item">writeweavers@gmail.com</span></li>
+            <li><img src="/static/css/location.svg" alt="Location" style="width: 20px"><span class="contact-item">Krishna Galli, Patan, Nepal</span></li>
+        </ul>
+    </div>
+    <div class="map righter">
+        map
+    </div>
 </div>
 
 {% endblock %}
