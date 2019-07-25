@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/staticpage_css.css' %}">
+    <script src="{% static 'js/staticpage.js' %}"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top bg-light">
+    <div class="d-flex flex-grow-1">
+        <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+        <a class="navbar-brand d-none d-lg-inline-block" href="#">
+            WriteWeavers
+        </a>
+        <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="#">
+            <img src="//placehold.it/40?text=LOGO" alt="logo">
+        </a>
+        <div class="w-100 text-right">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+    <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+            <li id="home-tab" class="nav-item active">
+                <a href="#" class="nav-link m-2 menu-item nav-active" onclick="setActive('home-tab')"><b>Home</b></a>
+            </li>
+            <li id="about-tab" class="nav-item">
+                <a href="#" class="nav-link m-2 menu-item" onclick="setActive('about-tab')"><b>About Us</b></a>
+            </li>
+            <li id="services-tab" class="nav-item">
+                <a href="#" class="nav-link m-2 menu-item" onclick="setActive('services-tab')"><b>Our Services</b></a>
+            </li>
+            <li id="contact-tab" class="nav-item">
+                <a href="#" class="nav-link m-2 menu-item" onclick="setActive('contact-tab')"><b>Contact Us</b></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{% block content %}{% endblock %}
+</body>
+</html>

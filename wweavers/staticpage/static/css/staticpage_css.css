@@ -1,0 +1,117 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    outline: none;
+    color: rgba(0,0,0,.9);
+    font-weight: strong;
+}
+
+.group {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.lefter {
+    float: left;
+}
+
+.righter {
+    float: right;
+}
+
+.menu ul li a {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.home {
+    margin-top: 72px;
+}
+
+.home-section {
+    padding: 5% 10%;
+}
+
+.about-icons {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.about-icons > div {
+    width: 30%;
+    text-align: center;
+}
+
+.active{
+  background-image: url("/static/css/active.png");
+  background-repeat: repeat-x;
+}
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.big-text {
+    font-size: 25px;
+    display: inline;
+
+}
+
+
+.learn-more-btn {
+    background-color: #b33750;
+    border: none;
+    text-align: center;
+    padding: 0.8%;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 10px;
+    color: white;
+    font-size: 10px;
+}
+
+.about {
+    text-align: center;
+}
+
+.about-us-title {
+    margin: 2%;
+}
+
+.about-icons{
+    padding: 5%;
+}
+
+.about-icons-title {
+    padding: 20px;
+}
+
+.services {
+    padding-left: 30%;
+}
+
+.services ul {
+    list-style-type: none;
+}
+
+.services ul li:before {
+    content: '';
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-size: 10px;
+    background-image: url('/static/css/tick-inside-circle.svg');
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
