@@ -1,7 +1,24 @@
+@font-face {
+    font-family: wweaversFont;
+    src: url('/static/css/FjallaOne-Regular.ttf');
+}
+
 * {
 	padding: 0px;
 	margin: 0px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: wweaversFont, serif;
+}
+
+p {
+    margin: 0;
+}
+
+.small-text {
+    margin-top: 15%;
+}
+
+body {
+    background-color: #fbfbfb;
 }
 
 a, a:hover {
@@ -31,7 +48,10 @@ a, a:hover {
 }
 
 .home {
-    margin-top: 72px;
+    background-image: url('/static/css/pencil.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
 }
 
 .home-section {
@@ -44,8 +64,15 @@ a, a:hover {
 }
 
 .about-icons > div {
-    width: 30%;
+    width: 33.33%;
     text-align: center;
+    font-size: x-small;
+}
+
+@media (min-width: 580px) {
+    .about-icons > div {
+            font-size: small;
+    }
 }
 
 .active{
@@ -56,6 +83,7 @@ a, a:hover {
 .navbar {
     padding-top: 0;
     padding-bottom: 0;
+    background: transparent;
 }
 
 .small-text {
@@ -81,6 +109,10 @@ a, a:hover {
     font-size: 10px;
 }
 
+.learn-more-btn:hover {
+    background-color: #b33800;
+}
+
 .about {
     text-align: center;
 }
@@ -98,7 +130,34 @@ a, a:hover {
 }
 
 .services {
-    padding-left: 30%;
+    width: 100%;
+}
+
+.services-background {
+    width: 0;
+}
+
+@media (min-width:580px) {
+    .services-background {
+        width: 30%;
+        background-image: url('/static/css/support.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 0;
+        padding-top: 30%;
+    }
+}
+
+.services-details {
+    width: 100%;
+    line-height: 2;
+    padding-left: 5%;
+}
+
+@media (min-width:580px) {
+    .services-details {
+        width: 70%;
+    }
 }
 
 .services ul, .contact-details ul {
