@@ -1,1 +1,10 @@
 *.pyc
+.idea*
+*__pycache__**
+*.pyc
+
+# local files
+*.sqlite3
+
+# temporary
+*migrations*
