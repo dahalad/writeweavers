@@ -1,72 +1,140 @@
 {% extends "staticpage/base.html" %}
 
 {% block title %}WriteWeavers | Home {% endblock %}
+{% block css %}
+        <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+{% endblock %}
 
 {% block content %}
 
-<div class="home home-section"  id="home">
-    <div class="small-text"><p>Helping Businesses, Non-Profits, Individuals</p></div>
-    <div class="big-text"><p><b>Create And Deliver</b></p></div>
-    <div class="big-text"><p><b>Quality Communication Material</b></p></div>
-    <button type="button" class="learn-more-btn">Learn More</button>
-</div>
-
-<div class="about home-section" id="about">
-    <div class="big-text about-us-title"><p><b>About Us</b></p></div>
-    <div><p>WriteWeavers is a company formed to address the needs of quality communication
-    services in Nepal. We specialize in written communication and PR services.
-    We help businesses, non-profits and individuals develop timely, relevant, media-ready
-    content keeping in mind their needs of connecting to an increasingly
-    educated and aware audience.</p>
-    </div>
-
-    <div class="about-icons">
-        <div>
-            <div><img src="/static/css/megaphone.svg" alt="Media Outreach" style="width: 50px; fill: green"></div>
-            <div class="about-icons-title">Media Outreach</div>
+    <section class="section cs-cover-section" id="home">
+      <div class="row cs-landing-cover-photo overlay">
+        <img class="img-fluid cover-photo" src="../../static/css/pencil.png">
+        <div class="row cover-photo-layover col-sm-6">
+          <h5>Helping Businesses, Non-Profits, Individuals</h5>
+          <h3>Create And Deliver</h3>
+          <h3 class="pd-bt-1">Quality Communication Material</h3>
+          <div class="col-sm-6 col-sm-offset-3 btn-content">
+            <button class="btn btn-block">
+              <p>Learn More</p>
+            </button>
+          </div>
         </div>
-        <div>
-            <div><img src="/static/css/contract.svg" alt="Content Management" style="width: 50px"></div>
-            <div class="about-icons-title">Content Management</div>
+      </div>
+    </section>
+
+    <div class="row about container" id="about">
+        <div class="about-us-title"><h3>About Us</h3></div>
+        <div><p>WriteWeavers is a company formed to address the needs of quality communication
+        services in Nepal. We specialize in written communication and PR services.
+        We help businesses, non-profits and individuals develop timely, relevant, media-ready
+        content keeping in mind their needs of connecting to an increasingly
+        educated and aware audience.</p>
         </div>
-        <div>
-            <div><img src="/static/css/hand-shake.svg" alt="PR Services" style="width: 50px"></div>
-            <div class="about-icons-title">PR Services</div>
+
+        <div class="about-icons">
+            <div>
+                <div><img src="/static/css/megaphone.svg" alt="Media Outreach" style="width: 50px; fill: green"></div>
+                <div class="about-icons-title">Media Outreach</div>
+            </div>
+            <div>
+                <div><img src="/static/css/contract.svg" alt="Content Management" style="width: 50px"></div>
+                <div class="about-icons-title">Content Management</div>
+            </div>
+            <div>
+                <div><img src="/static/css/hand-shake.svg" alt="PR Services" style="width: 50px"></div>
+                <div class="about-icons-title">PR Services</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section section-services" id="services">
+        <div class="row container">
+            <div class="col-sm-4 services-img">
+                    <img src="../../static/css/support.svg" />
+            </div>
+            <div class="col-sm-8 services-content">
+                <h3>Our Services</h3>
+                <p>Our Service portfolio includes, but is not limited to the following:</p>
+                <ul>
+                    <li>Planning, writing and editing articles for magazines and broadsheets</li>
+                    <li>Planning and executing customized publicity and communication material</li>
+                    <li>Writing, editing and proofreading reports and proposals</li>
+                    <li>Translation Services</li>
+                    <li>Planning, writing, revising content for websites and other digital media</li>
+                    <li>Ghostwriting services for individuals and organizations</li>
+                    <li>Providing skills training on effective business communication practices</li>
+                    <li>Public Relations & Media Consultants</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact" id="contact">
+    <div class="row container container-contact">
+        <div class="col-sm-4 contact-box">
+            <div class="contact-details">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <a>
+                        <i class="fas fa-phone-alt"></i>
+                        +977-1-500000
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <a>
+                        <i class="fas fa-envelope"></i>
+                        writeweavers@gmail.com
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <a>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Krishna Galli, Patan, Nepal
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-8 map-location">
+            <div class="map" id="map">
+
+            </div>
         </div>
     </div>
 </div>
 
-<div class="services home-section group" id="services">
-    <div class="services-background lefter">
-        <p>&nbsp</p>
-    </div>
-    <div class="services-details righter">
-        <div class="big-text" ><p><b>Our Services</b></p></div>
-        <p>Our Service portfolio includes, but is not limited to, the following</p>
-        <ul>
-            <li>Planning, writing and editing articles for magazines and broadsheets</li>
-            <li>Planning and executing customized publicity and communication material</li>
-            <li>Writing, editing and proofreading reports and proposals</li>
-            <li>Translation Serviecs</li>
-            <li>Planning, writing, revising content for websites and other digital media</li>
-            <li>Ghostwriting services for individuals and organizations</li>
-            <li>Providing skills training on effective business communication practices</li>
-            <li>Public Relations & Media Consultants</li>
-        </ul>
-    </div>
-</div>
+{% endblock %}
 
-<div class="contact home-section group">
-    <div class="contact-details lefter">
-        <ul>
-            <li><img src="/static/css/telephone.svg" alt="Phone Number" style="width: 20px"><span class="contact-item">+977-1-500000</span></li>
-            <li><img src="/static/css/telephone.svg" alt="E-mail Address" style="width: 20px"><span class="contact-item">writeweavers@gmail.com</span></li>
-            <li><img src="/static/css/location.svg" alt="Location" style="width: 20px"><span class="contact-item">Krishna Galli, Patan, Nepal</span></li>
-        </ul>
-    </div>
-    <div class="map righter">
-        map
-    </div>
-</div>
+{% block js %}
 
+{#    google maps api to be used but not billing account#}
+{#    will have to use image for now#}
+{##}
+{#    <script>#}
+{#        function initMap() {#}
+{#          var uluru = {lat:25.344 , lng:85.3206826};#}
+{##}
+{#          var map = new google.maps.Map(document.getElementById('map'), {#}
+{#            zoom: 4,#}
+{#            center: uluru#}
+{#          });#}
+{##}
+{#          var marker = new google.maps.Marker({#}
+{#              position: uluru,#}
+{#              map: map#}
+{#            });#}
+{##}
+{#        }#}
+{##}
+{#    </script>#}
+{#        <script async defer#}
+{#        src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">#}
+{#    </script>#}
+{##}
+{#    <script>#}
+{#        $( document ).ready(function() {#}
+{#            initMap();#}
+{#        });#}
+{#    </script>#}
 {% endblock %}
