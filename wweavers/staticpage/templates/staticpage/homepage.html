@@ -1,5 +1,5 @@
 {% extends "staticpage/base.html" %}
-
+{% load static %}
 {% block title %}WriteWeavers | Home {% endblock %}
 {% block css %}
         <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
@@ -9,7 +9,7 @@
 
     <section class="section cs-cover-section" id="home">
       <div class="row cs-landing-cover-photo overlay">
-        <img class="img-fluid cover-photo" src="../../static/css/pencil.png">
+        <img class="img-fluid cover-photo" src="{% static 'css/pencil.png' %}">
         <div class="row cover-photo-layover col-sm-6">
           <h5>Helping Businesses, Non-Profits, Individuals</h5>
           <h3>Create And Deliver</h3>
@@ -34,15 +34,15 @@
 
         <div class="about-icons">
             <div>
-                <div><img src="/static/css/megaphone.svg" alt="Media Outreach" style="width: 50px; fill: green"></div>
+                <div><img src="{% static 'css/megaphone.svg' %}" alt="Media Outreach" style="width: 50px; fill: green"></div>
                 <div class="about-icons-title">Media Outreach</div>
             </div>
             <div>
-                <div><img src="/static/css/contract.svg" alt="Content Management" style="width: 50px"></div>
+                <div><img src="{% static 'css/contract.svg' %}" alt="Content Management" style="width: 50px"></div>
                 <div class="about-icons-title">Content Management</div>
             </div>
             <div>
-                <div><img src="/static/css/hand-shake.svg" alt="PR Services" style="width: 50px"></div>
+                <div><img src="{% static 'css/hand-shake.svg' %}" alt="PR Services" style="width: 50px"></div>
                 <div class="about-icons-title">PR Services</div>
             </div>
         </div>
@@ -52,7 +52,7 @@
     <div class="section section-services" id="services">
         <div class="row container">
             <div class="col-sm-4 services-img">
-                    <img src="../../static/css/support.svg" />
+                    <img src="{% static 'css/support.svg' %}" />
             </div>
             <div class="col-sm-8 services-content">
                 <h3>Our Services</h3>
