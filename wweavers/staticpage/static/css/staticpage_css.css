@@ -11,10 +11,6 @@ p {
     margin: 0;
 }
 
-.small-text {
-    margin-top: 15%;
-}
-
 body {
     background-color: #fbfbfb;
 }
@@ -22,15 +18,6 @@ body {
 a, a:hover {
     outline: none;
     color: rgba(0,0,0,.9);
-    /*font-weight: bold;*/
-}
-
-.lefter {
-    float: left;
-}
-
-.righter {
-    float: right;
 }
 
 .menu ul li a {
@@ -39,30 +26,16 @@ a, a:hover {
     text-transform: uppercase;
 }
 
-.home {
-    background-image: url('/static/css/pencil.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-}
-
-.home-section {
-    padding: 5% 10%;
-}
-
-
 .active{
 background-image: url("/static/css/active.png");
 background-repeat: repeat-x;
 }
 
-.navbar {
-padding-top: 0;
-padding-bottom: 0;
-background: transparent;
-}
-
 /* Learn More Section */
+
+.home {
+    margin: auto;
+}
 
 .cover-photo{
     display: block;
@@ -95,6 +68,7 @@ background: transparent;
 .cs-landing-cover-photo.overlay{
     width: 100%;
     height: 450px;
+    margin: auto;
 }
 
 .cs-landing-cover-photo .cover-photo-layover{
@@ -208,7 +182,6 @@ background: transparent;
 
 /* About Us Section End */
 
-
 /* Services Section */
 
 #services {
@@ -276,15 +249,19 @@ background: transparent;
 
 /* Services Section End */
 
-
 /* Contact Us Section */
+
+.contact {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
 
 .contact-item {
     margin-left: 15px;
 }
 
 #map {
-    height: 400px;
+    height: 500px;
     background-color: grey;
 }
 
@@ -313,3 +290,106 @@ background: transparent;
 /* Contact Us Section End */
 
 
+/* Media Queries (max-width: 1000px) */
+
+@media (max-width: 1000px) {
+
+
+    /* Learn More Section */
+
+    .cs-landing-cover-photo.overlay {
+        background-color: #933e4d5e;
+    }
+
+    .cover-photo {
+        opacity: .1;
+        object-fit: cover;
+    }
+
+    .cs-landing-cover-photo .cover-photo-layover {
+        margin: auto;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .cover-photo-layover h3, .cover-photo-layover h5{
+        color: white;
+    }
+
+    .cover-photo-layover h3 {
+        font-size: 27px;
+    }
+
+    .btn-content {
+        margin: auto;
+    }
+
+    .cover-photo-layover button {
+        margin: auto;
+        width: 50%;
+    }
+
+    /* Learn More Section End */
+
+    /* About Us Section */
+
+    #about {
+        background-color: #dedede40;
+    }
+
+    .about .about-icons {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+    }
+
+    .about-icons-title {
+        padding: 20px 0;
+    }
+
+    .about-icons > div {
+        width: 100%;
+    }
+
+    /* About Us Section End */
+
+    /* Services Section */
+
+    #services {
+        padding: 40px;
+    }
+
+    .services-content {
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    .section-services .container p, .section-services .container ul li {
+        font-size: 17px;
+    }
+
+    /* Services Section End */
+
+    /* Contact Us Section */
+
+    .contact-box {
+        text-align: center;
+    }
+
+    /* Contact Us Section End */
+
+}
+
+
+@media (min-width: 575px) and (max-width: 1000px) {
+
+    .cover-photo-layover, .services-content, .contact-box, .map-location {
+        max-width: 100%;
+    }
+
+    .section.section-services .container, #contact .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
