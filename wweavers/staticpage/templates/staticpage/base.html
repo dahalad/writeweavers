@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/staticpage_css.css' %}">
     {% block css %}
@@ -51,6 +52,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/ed211d71c6.js"></script>
     <script src="{% static 'js/staticpage.js' %}"></script>
+    <script>
+        $(document).ready(function() {
+            var navMain = $("#myNavbar");
+            navMain.on("click", "a", null, function () {
+                navMain.collapse('hide');
+            });
+        })
+    </script>
     {% block js %}{% endblock %}
 </body>
 </html>
