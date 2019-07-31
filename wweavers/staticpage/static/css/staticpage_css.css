@@ -265,7 +265,7 @@ background-repeat: repeat-x;
     background-color: grey;
 }
 
-#map img {
+#map iframe {
     object-fit: cover;
     object-position: center;
     display: block;
